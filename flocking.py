@@ -139,6 +139,9 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_r:
+                create_boids(60)
 
     all_sprite.update()
 
